@@ -1,58 +1,34 @@
-import React, { useState } from "react";
-import "../navbar.css";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import Button from "react-bootstrap/Button";
 
-function Navbar() {
-  const [active, setActive] = useState("nav__menu");
-  const [icon, setIcon] = useState("nav__toggler");
-  const navToggle = () => {
-    if (active === "nav__menu") {
-      setActive("nav__menu nav__active");
-    } else setActive("nav__menu");
-
-    // Icon Toggler
-    if (icon === "nav__toggler") {
-      setIcon("nav__toggler toggle");
-    } else setIcon("nav__toggler");
-  };
+const TopNav = () => {
   return (
-    <nav className="nav">
-      <a href="#" className="nav__brand">
-        Hire
-      </a>
-      <ul className={active}>
-        <li className="nav__item">
-          <a href="#" className="nav__link">
-            Home
-          </a>
-        </li>
-        <li className="nav__item">
-          <a href="#" className="nav__link">
-            Reviews
-          </a>
-        </li>
-        <li className="nav__item">
-          <a href="#" className="nav__link">
-            Post a job
-          </a>
-        </li>
-        <li className="nav__item">
-          <a href="#" className="nav__link">
-            Login
-          </a>
-        </li>
-        <li className="nav__item">
-          <a href="#" className="nav__link">
-            Sign up
-          </a>
-        </li>
-      </ul>
-      <div onClick={navToggle} className={icon}>
-        <div className="line1"></div>
-        <div className="line2"></div>
-        <div className="line3"></div>
-      </div>
-    </nav>
+    <Navbar bg="#fff" expand="lg">
+      <Container>
+        <Navbar.Brand href="#home" className="fw-bold fs-4">
+          Hired
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="#home" className="fw-semibold">
+              Home
+            </Nav.Link>
+            <Nav.Link href="#link">Reviews</Nav.Link>
+            <Nav.Link href="#link" className="md:ps-5">
+              Post a Job
+            </Nav.Link>
+          </Nav>
+          <p className="pt-3 pe-4">
+            <a href="#">Login</a>
+          </p>
+          <Button className="px-5 fw-bold">Sign Up</Button>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
-}
+};
 
-export default Navbar;
+export default TopNav;
