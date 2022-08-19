@@ -1,9 +1,10 @@
 import React from "react";
+import Navbar from "./components/navbar";
 
 function App() {
   return (
     <div>
-      <h1 className="text-capitalize text-decoration-underline text-center fst-italic">hired</h1>
+      < Navbar />
     </div>
   );
 }
