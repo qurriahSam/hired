@@ -5,7 +5,7 @@ import Button from "react-bootstrap/Button";
 
 const TopNav = () => {
   return (
-    <Navbar bg="#fff" expand="lg">
+    <Navbar bg="light" expand="lg" fixed="top">
       <Container>
         <Navbar.Brand href="#home" className="fw-bold fs-4">
           Hired
