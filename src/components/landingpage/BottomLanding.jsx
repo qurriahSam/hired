@@ -9,11 +9,11 @@ import girlReviewImg from "../../images/ladyreview.jpg";
 const BottomLanding = () => {
   const blueCol = { color: "rgb(12, 110, 253)" };
   return (
-    <div className="container">
-      <h2 className="fw-bold text-black text-center mb-3">
+    <div id="reviews" className="container pt-5">
+      <h2 className="fw-bold text-black text-center mb-3 pt-2">
         What jobseekers say <br /> about us
       </h2>
-      <div className="d-lg-flex my-lg-5">
+      <div className="d-md-flex my-md-5 pb-4">
         <Card className="p-3 text-center shadow mx-auto mb-3" style={{ width: "18rem" }}>
           <Card.Img
             variant="top"
@@ -30,7 +30,7 @@ const BottomLanding = () => {
             <Card.Text>UI/UX Designer</Card.Text>
           </Card.Body>
         </Card>
-        <Card className="p-3 text-center shadow mx-auto mb-3" style={{ width: "18rem" }}>
+        <Card className="p-3 text-center shadow mx-auto mb-3 mx-md-3" style={{ width: "18rem" }}>
           <Card.Img
             variant="top"
             src={girlReviewImg}
@@ -64,7 +64,7 @@ const BottomLanding = () => {
         </Card>
       </div>
       <div
-        className="container rounded-3 text-center p-3 mb-3 py-md-5"
+        className="container rounded-3 text-center p-3 py-md-5"
         style={{ backgroundColor: "#0B223A", maxWidth: "800px" }}
       >
         <p className="text-white fw-bold fs-2 pb-md-3">
