@@ -17,7 +17,7 @@ const TopNav = () => {
             <Nav.Link href="#home" className="fw-semibold">
               Home
             </Nav.Link>
-            <Nav.Link href="#link" className="fw-semibold ms-lg-5">
+            <Nav.Link href="#reviews" className="fw-semibold ms-lg-5">
               Reviews
             </Nav.Link>
             <Nav.Link href="#link2" className="fw-semibold ms-lg-5 pb-3 pb-lg-0">
