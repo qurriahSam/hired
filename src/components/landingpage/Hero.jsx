@@ -3,6 +3,7 @@ import Image from "react-bootstrap/Image";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import askme from "../../images/askwhatnobg2c.png";
+import deskGuy from "../../images/guyoncomp.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPalette } from "@fortawesome/free-solid-svg-icons";
 import { faCode } from "@fortawesome/free-solid-svg-icons";
@@ -41,7 +42,7 @@ function Hero() {
       </div>
       <div className="container">
         <h2 className="fw-bold text-black text-center mb-4">Explore by Category</h2>
-        <div className="d-lg-flex my-lg-5">
+        <div className="d-md-flex my-lg-5">
           <Card className="p-3 shadow mx-auto mb-3" style={{ width: "15rem" }}>
             <Card.Body>
               <div
@@ -54,7 +55,7 @@ function Hero() {
               <Card.Text className="fw-semibold text-secondary fs-6">200 Professionals</Card.Text>
             </Card.Body>
           </Card>
-          <Card className="p-3 shadow mx-auto mb-3" style={{ width: "15rem" }}>
+          <Card className="p-3 shadow mx-auto mb-3 mx-md-3" style={{ width: "15rem" }}>
             <Card.Body>
               <div
                 className="text-center rounded-circle mb-2"
@@ -78,6 +79,25 @@ function Hero() {
               <Card.Text className="fw-semibold text-secondary fs-6">109 Professionals</Card.Text>
             </Card.Body>
           </Card>
+        </div>
+      </div>
+      <div className="container mb-5">
+        <div className="d-lg-flex">
+          <div>
+            <Image src={deskGuy} alt="cover" fluid style={{ maxHeight: "80em" }} />
+          </div>
+          <div className="d-lg-flex flex-column justify-content-end">
+            <h2 className="fw-bold py-2 mb-lg-3 fs-1 lh-base">
+              Make a very good qualified profile
+            </h2>
+            <p className="mb-lg-5">
+              Create an account so you can start building your profile and boost it. Enter all your
+              experience and skill and get noticed by employers.
+            </p>
+            <div className="mb-2 mb-lg-5">
+              <Button className="px-5 fw-bold me-3">Learn More</Button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
