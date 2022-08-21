@@ -1,7 +1,12 @@
 import React from "react";
 import Image from "react-bootstrap/Image";
 import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
 import askme from "../../images/askwhatnobg2c.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPalette } from "@fortawesome/free-solid-svg-icons";
+import { faCode } from "@fortawesome/free-solid-svg-icons";
+import { faDatabase } from "@fortawesome/free-solid-svg-icons";
 
 const blue = { color: "#1B77AD" };
 
@@ -32,6 +37,47 @@ function Hero() {
               </Button>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="container">
+        <h2 className="fw-bold text-black text-center mb-4">Explore by Category</h2>
+        <div className="d-lg-flex my-lg-5">
+          <Card className="p-3 shadow mx-auto mb-3" style={{ width: "15rem" }}>
+            <Card.Body>
+              <div
+                className="text-center rounded-circle mb-2"
+                style={{ width: "50px", height: "50px", backgroundColor: "#FFB800" }}
+              >
+                <FontAwesomeIcon icon={faPalette} className="mt-3" color="#fff" />
+              </div>
+              <Card.Text className="fw-semibold text-black mb-0">UI/UX Designer</Card.Text>
+              <Card.Text className="fw-semibold text-secondary fs-6">200 Professionals</Card.Text>
+            </Card.Body>
+          </Card>
+          <Card className="p-3 shadow mx-auto mb-3" style={{ width: "15rem" }}>
+            <Card.Body>
+              <div
+                className="text-center rounded-circle mb-2"
+                style={{ width: "50px", height: "50px", backgroundColor: "#2E88BC" }}
+              >
+                <FontAwesomeIcon icon={faCode} className="mt-3" color="#fff" />
+              </div>
+              <Card.Text className="fw-semibold text-black mb-0">Web Developer</Card.Text>
+              <Card.Text className="fw-semibold text-secondary fs-6">173 Professionals</Card.Text>
+            </Card.Body>
+          </Card>
+          <Card className="p-3 shadow mx-auto mb-3" style={{ width: "15rem" }}>
+            <Card.Body>
+              <div
+                className="text-center rounded-circle mb-2"
+                style={{ width: "50px", height: "50px", backgroundColor: "#FF6647" }}
+              >
+                <FontAwesomeIcon icon={faDatabase} className="mt-3" color="#fff" />
+              </div>
+              <Card.Text className="fw-semibold text-black mb-0">Data Scientist</Card.Text>
+              <Card.Text className="fw-semibold text-secondary fs-6">109 Professionals</Card.Text>
+            </Card.Body>
+          </Card>
         </div>
       </div>
     </div>
