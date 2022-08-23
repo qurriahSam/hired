@@ -9,10 +9,9 @@ function ManageAccount() {
   };
 
   return (
-    <div className="container mt-5 pt-3">
-      <div className="d-none">
-      
-      </div>
+    <div className="container mt-5 pt-3 text-center">
+      <div className="">
+
       <div>
         <h2 className="fw-bold">Manage Account</h2>
         <div className="d-flex fw-bold fs-5">
@@ -32,6 +31,7 @@ function ManageAccount() {
         </div>
         {selected ? <Jobseekers /> : <Employers />}
       </div>
+    </div>
     </div>
   );
 }
