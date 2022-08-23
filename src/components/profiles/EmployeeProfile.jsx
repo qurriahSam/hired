@@ -63,18 +63,19 @@ function EmployeeProfile() {
       </Card.Body>
     </Card>
 
-    <Card className="shadow p-3 mb-5 bg-white rounded mx-auto"   style={{ width: '50em', height:"30rem", context:"center", marginTop: "7em"}}>
+    <Card className="shadow p-3 mb-5 bg-white rounded mx-auto"   style={{ width: '50em', height:"35rem", context:"center", marginTop: "7em"}}>
     <FontAwesomeIcon icon={faCirclePlus} className="mt-1" color="gray" fontSize={30} width="88rem"/>
      <Card.Body className='d-flex' style={{ width: '20rem',  height:"20rem"}} >
       <div>
         <Card.Title style={{ width: '44rem',fontFamily:"georgia",fontSize:"30px"}}>Experience</Card.Title>
-        <div>
-        <Card.Subtitle style={{ width: '44rem',fontFamily:"georgia",fontSize:"25px"}}>Company Name</Card.Subtitle>
-        <FontAwesomeIcon icon={faCirclePlus} className="mt-1" color="gray" fontSize={20} width="40rem"/>
-        </div>
+        <FontAwesomeIcon icon={faPencil} className="mt-1" color="gray" fontSize={20} width="40rem"/>
+        <Card.Title style={{ width: '44rem',fontFamily:"georgia",fontSize:"25px"}}>Company Name</Card.Title>
         <Card.Subtitle style={{fontFamily:"times-new-roman", fontSize:"20px"}}>
           <p>In addition, i am also labeled as the “Mediator”. This means that I am more introverted than extroverted and very disorganized. I am also dedicated and hardworking in reaching my goals and visions. In addition, being a mediator means that I’m open and flexible, but on the flip side that also means that I can be too impractical and take things too personally.</p>
         </Card.Subtitle>
+        <div>
+        <FontAwesomeIcon icon={faPencil} className="mt-1" color="gray" fontSize={20} width="40rem"/>
+        </div>
         <Card.Title style={{ width: '44rem',fontFamily:"georgia",fontSize:"25px"}}>Company Name</Card.Title>
         <Card.Subtitle style={{fontFamily:"times-new-roman", fontSize:"20px"}}>
           <p>In addition, i am also labeled as the “Mediator”. This means that I am more introverted than extroverted and very disorganized. I am also dedicated and hardworking in reaching my goals and visions. In addition, being a mediator means that I’m open and flexible, but on the flip side that also means that I can be too impractical and take things too personally.</p>
