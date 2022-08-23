@@ -8,8 +8,8 @@ function Jobseekers() {
     <>
     <div className="container">
       <div className="row">
-        <div className="col-md-12">
-        <div className="d-md-flex ">
+        <div className="col-md-6">
+        <div className="d-md-flex">
      
     <Card className="mt-12 p-3 text-right " style={{ width: "18rem" }}>
     <Card.Img
@@ -29,6 +29,7 @@ function Jobseekers() {
         <Button variant="danger">Delete User</Button>{' '}
       </Card.Body>
     </Card>
+    
     <Card className="mt-12 p-3 text-right shadow mx-auto mb-12 mx-md-3" style={{ width: "18rem" }}>
     <Card.Img
       variant="top"
@@ -39,8 +40,9 @@ function Jobseekers() {
       <Card.Body>
         <Card.Title>Card Title</Card.Title>
         <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+        Email@gmail.com
+          Position:
+          Employment status:
         </Card.Text>
         <Button variant="danger">Delete User</Button>{' '}
       </Card.Body>
@@ -49,6 +51,7 @@ function Jobseekers() {
     </div>
     </div>
     </div>
+    
     </>
   );
 };
