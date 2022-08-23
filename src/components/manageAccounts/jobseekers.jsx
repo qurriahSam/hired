@@ -19,10 +19,12 @@ function Jobseekers() {
       style={{ width: "6rem" }}
       />
       <Card.Body>
-        <Card.Title>Card Title</Card.Title>
+        <Card.Title>Jobseeker Name</Card.Title>
         <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+          Email@gmail.com
+          Position:
+          Employment status:
+
         </Card.Text>
         <Button variant="danger">Delete User</Button>{' '}
       </Card.Body>
