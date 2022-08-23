@@ -1,9 +1,8 @@
 
 import Card from 'react-bootstrap/Card';
 import girlReviewImg from "../../images/ladyreview.jpg";
-import { faPencil } from "@fortawesome/free-solid-svg-icons";
+import { faFile, faPencil } from "@fortawesome/free-solid-svg-icons";
 import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
-//import { faFile } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
@@ -93,10 +92,8 @@ function EmployeeProfile() {
         <div>
           
          <Card.Title style={{ width: '44rem',fontFamily:"georgia",fontSize:"25px"}}>Resume</Card.Title>
-         <Card.Img variant="center"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGa6mTw7RA9yXLKb4Tjx84pC0uxMbWGQAZWSlOqZo&s"
-            className="potrait mx-auto"
-            style={{ width: "15rem" }}></Card.Img>
+         
+            <FontAwesomeIcon icon={faFile} className="mt-5" color="#072A6C" fontSize={150} width="44rem"/>
          
         </div>
         
