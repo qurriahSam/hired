@@ -45,23 +45,14 @@ function JobSeekerInfo() {
     <FontAwesomeIcon icon={faPencil} className="mt-1" color="gray" fontSize={30} width="88rem"/>
      
       <Card.Body className='d-flex' style={{ width: '20rem',  height:"20rem"}} >
-      
-      
-        <div>
-        
+        <div className=''>
         <Card.Title style={{ width: '44rem',fontFamily:"georgia",fontSize:"25px"}}>About Me</Card.Title>
-        
         <Card.Subtitle style={{fontFamily:"times-new-roman", fontSize:"20px"}}>
           <p>I would describe myself my self now in four different parts. I would describe myself as a kind, generous and helpful person. I love to help my friends out by giving them advice with their problems, and by having their back whenever they need it from supporting them in activities such as going to band concerts to being there emotionally when a break up happens. I would also describe myself as a very artistic, imaginative and creative. I love to build and make things with my hands, especially in art. For example, I enjoy sculpting and creating tiny tiny creatures with clay. Thirdly, I would describe myself as a very intelligent, curious and wondrous person.</p>
         </Card.Subtitle>
-        
         </div>
-        
-        
         <Card.Text></Card.Text>
-        
-        
-      </Card.Body>
+        </Card.Body>
     </Card>
     </div>
     </div>
