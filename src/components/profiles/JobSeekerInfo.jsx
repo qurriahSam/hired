@@ -1,13 +1,12 @@
-
 import Card from 'react-bootstrap/Card';
 import girlReviewImg from "../../images/ladyreview.jpg";
-import { faFile, faPencil } from "@fortawesome/free-solid-svg-icons";
-import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
+import { faPencil } from "@fortawesome/free-solid-svg-icons";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
 
-function EmployeeProfile() {
+function JobSeekerInfo() {
   return (
     
     <div className='container' >
@@ -64,50 +63,11 @@ function EmployeeProfile() {
         
       </Card.Body>
     </Card>
-
-    <Card className="shadow p-3 mb-5 bg-white rounded mx-auto"   style={{ width: '50em', height:"35rem", context:"center", marginTop: "7em"}}>
-    <FontAwesomeIcon icon={faCirclePlus} className="mt-1" color="gray" fontSize={30} width="88rem"/>
-     <Card.Body className='d-flex' style={{ width: '20rem',  height:"20rem"}} >
-      <div>
-        <Card.Title style={{ width: '44rem',fontFamily:"georgia",fontSize:"30px"}}>Experience</Card.Title>
-        <FontAwesomeIcon icon={faPencil} className="mt-1" color="gray" fontSize={20} width="40rem"/>
-        <Card.Title style={{ width: '44rem',fontFamily:"georgia",fontSize:"25px"}}>Company Name</Card.Title>
-        <Card.Subtitle style={{fontFamily:"times-new-roman", fontSize:"20px"}}>
-          <p>In addition, i am also labeled as the “Mediator”. This means that I am more introverted than extroverted and very disorganized. I am also dedicated and hardworking in reaching my goals and visions. In addition, being a mediator means that I’m open and flexible, but on the flip side that also means that I can be too impractical and take things too personally.</p>
-        </Card.Subtitle>
-        <div>
-        <FontAwesomeIcon icon={faPencil} className="mt-1" color="gray" fontSize={20} width="40rem"/>
-        </div>
-        <Card.Title style={{ width: '44rem',fontFamily:"georgia",fontSize:"25px"}}>Company Name</Card.Title>
-        <Card.Subtitle style={{fontFamily:"times-new-roman", fontSize:"20px"}}>
-          <p>In addition, i am also labeled as the “Mediator”. This means that I am more introverted than extroverted and very disorganized. I am also dedicated and hardworking in reaching my goals and visions. In addition, being a mediator means that I’m open and flexible, but on the flip side that also means that I can be too impractical and take things too personally.</p>
-        </Card.Subtitle>
-        </div>
-        </Card.Body>
-    </Card>
-
-    <Card className="shadow p-3 mb-5 bg-white rounded mx-auto"   style={{ width: '50em', height:"25rem", context:"center", marginTop: "7em"}}>
-    <FontAwesomeIcon icon={faPencil} className="mt-1" color="gray" fontSize={30} width="88rem"/>
-     
-      <Card.Body className='d-flex' style={{ width: '20rem',  height:"20rem"}} >
-        
-        <div>
-          
-         <Card.Title style={{ width: '44rem',fontFamily:"georgia",fontSize:"25px"}}>Resume</Card.Title>
-         
-            <FontAwesomeIcon icon={faFile} className="mt-5" color="#072A6C" fontSize={150} width="44rem"/>
-         
-        </div>
-        
-        </Card.Body>
-    </Card>
     </div>
     </div>
     </div>
-
-
 
   );
 }
 
-export default EmployeeProfile;
+export default JobSeekerInfo;
