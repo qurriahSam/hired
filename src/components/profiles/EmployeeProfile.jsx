@@ -12,7 +12,7 @@ function EmployeeProfile() {
     
     <div className='container' >
       <div >
-        
+       <div className='row'> 
     <Card className="shadow p-3 mb-5 bg-white rounded mx-auto"   style={{ width: '50em', height:"20rem", context:"center", marginTop: "7em"}}>
     <FontAwesomeIcon icon={faPencil} className="mt-1" color="gray" fontSize={30} width="88rem"/>
      
@@ -99,7 +99,7 @@ function EmployeeProfile() {
         
         </Card.Body>
     </Card>
-    
+    </div>
     </div>
     </div>
 
