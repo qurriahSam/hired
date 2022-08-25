@@ -24,6 +24,10 @@ function SignupJobseeker() {
     },
   });
 
+  React.useEffect(() => {
+    localStorage.setItem("user", JSON.stringify(user));
+  }, [user]);
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
     mutate(newEmployer);
