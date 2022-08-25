@@ -4,7 +4,7 @@ import Hero from "./Hero";
 
 const LandingPage = () => {
   return (
-    <div className="mt-5 pt-3">
+    <div>
       <Hero />
       <BottomLanding />
     </div>
