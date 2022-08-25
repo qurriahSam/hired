@@ -2,6 +2,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
 
 const TopNav = () => {
   return (
@@ -20,14 +21,18 @@ const TopNav = () => {
             <Nav.Link href="#reviews" className="fw-semibold ms-lg-5">
               Reviews
             </Nav.Link>
-            <Nav.Link href="#link2" className="fw-semibold ms-lg-5 pb-3 pb-lg-0">
-              Post a Job
-            </Nav.Link>
+            <Nav.Link className="fw-semibold ms-lg-5 pb-3 pb-lg-0">Post a Job</Nav.Link>
           </Nav>
-          <Nav.Link href="#link3" className="fw-semibold pe-3 pb-3 pb-lg-0">
-            Login
-          </Nav.Link>
-          <Button className="px-5 fw-bold">Sign Up</Button>
+          <Nav className="fw-semibold pe-3 pb-3 pb-lg-0">
+            <Link to="/login" className="text-dark text-decoration-none">
+              Login
+            </Link>
+          </Nav>
+          <Button className="px-4 fw-bold">
+            <Link to="/signup" className="text-light text-decoration-none">
+              Sign Up
+            </Link>
+          </Button>
         </Navbar.Collapse>
       </Container>
     </Navbar>
