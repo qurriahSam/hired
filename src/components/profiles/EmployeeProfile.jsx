@@ -51,9 +51,11 @@ function EmployeeProfile() {
         <div>
         
         <Card.Title style={{ width: '44rem',fontFamily:"georgia",fontSize:"25px"}}>About Me</Card.Title>
+        
         <Card.Subtitle style={{fontFamily:"times-new-roman", fontSize:"20px"}}>
           <p>I would describe myself my self now in four different parts. I would describe myself as a kind, generous and helpful person. I love to help my friends out by giving them advice with their problems, and by having their back whenever they need it from supporting them in activities such as going to band concerts to being there emotionally when a break up happens. I would also describe myself as a very artistic, imaginative and creative. I love to build and make things with my hands, especially in art. For example, I enjoy sculpting and creating tiny tiny creatures with clay. Thirdly, I would describe myself as a very intelligent, curious and wondrous person.</p>
         </Card.Subtitle>
+        
         </div>
         
         
