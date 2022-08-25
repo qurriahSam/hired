@@ -11,7 +11,9 @@ function Jobseekers() {
         <div className="col-md-6">
         <div className="d-md-flex">
      
-    <Card className=" mt-12 p-3 text-right shadow mx-auto mb-12 mx-md-3" style={{ width: "18rem" }}>
+
+    <Card className="mt-12 p-3 text-right mb-3 me-md-3 " style={{ width: "18rem" }}>
+
     <Card.Img
       variant="top"
       src={girlReviewImg}
@@ -29,8 +31,9 @@ function Jobseekers() {
         <Button variant="danger">Delete User</Button>{' '}
       </Card.Body>
     </Card>
-    
-    <Card className="mt-4 p-3 text-right shadow mx-auto mb-12 mx-md-3" style={{ width: "18rem" }}>
+
+    <Card className="mt-12 p-3 text-right mb-3 me-md-3 " style={{ width: "18rem" }}>
+
     <Card.Img
       variant="top"
       src={girlReviewImg}
@@ -48,6 +51,9 @@ function Jobseekers() {
         <Button variant="danger">Delete User</Button>{' '}
       </Card.Body>
     </Card>
+
+    
+
     </div>
     </div>
     </div>

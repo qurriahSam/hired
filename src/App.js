@@ -7,6 +7,8 @@ import JobSeekerVarification from "./components/profiles/JobSeekerVarification";
 import AcceptDecline from "./components/profiles/AcceptDecline";
 import SignUpOrIn from "./components/signup/SignUpOrIn";
 import Account from "./components/manageAccounts/Account"
+import Termination from "./components/termination/termination"
+
 
 function App() {
   return (
@@ -16,6 +18,7 @@ function App() {
       <AcceptDecline/>
       <JobSeekerVarification/>
       <Account />
+       <Termination />
     </div>
   );
 }
