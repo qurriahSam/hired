@@ -7,7 +7,7 @@ import { faFolder } from "@fortawesome/free-solid-svg-icons";
 
 const ApproveFileContainer = () => {
   return (
-    <Card className="shadow mx-auto">
+    <Card className="shadow-sm mx-auto mb-3">
       <Card.Body className="d-md-flex justify-content-between">
         <Card.Text className="fw-semibold text-black mb-0"></Card.Text>
         <Card.Text className="fw-semibold mb-0">JobSeekerName</Card.Text>
