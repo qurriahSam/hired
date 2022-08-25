@@ -6,7 +6,7 @@ import TopNav from "./components/Navbar";
 import JobSeekerVarification from "./components/profiles/JobSeekerVarification";
 import AcceptDecline from "./components/profiles/AcceptDecline";
 import SignUpOrIn from "./components/signup/SignUpOrIn";
-
+import Account from "./components/manageAccounts/Account"
 
 function App() {
   return (
@@ -15,8 +15,8 @@ function App() {
       <SignUpOrIn />  
       <AcceptDecline/>
       <JobSeekerVarification/>
+      <Account />
     </div>
-
   );
 }
 
