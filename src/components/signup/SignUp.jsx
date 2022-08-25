@@ -4,7 +4,7 @@ import coverGuy from "../../images/bgbwbg3.png";
 import SignupEmployer from "./SignupEmployer";
 import SignupJobseeker from "./SignupJobseeker";
 
-function SignUpOrIn() {
+function SignUp() {
   const [selected, setSelected] = React.useState(true);
   const handleSelected = () => {
     setSelected(!selected);
@@ -41,4 +41,4 @@ function SignUpOrIn() {
   );
 }
 
-export default SignUpOrIn;
+export default SignUp;
