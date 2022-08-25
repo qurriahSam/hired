@@ -40,7 +40,7 @@ function SignupJobseeker() {
   };
 
   return (
-    <div>
+    <div className="overflow-auto">
       <Form onSubmit={handleFormSubmit}>
         <Form.Group className="mb-3" controlId="formSignupUsername">
           <Form.Label>Username:</Form.Label>
@@ -109,7 +109,7 @@ function SignupJobseeker() {
             We'll never share your email with anyone else.
           </Form.Text>
         </Form.Group>
-        {/*         <Form.Group className="mb-3" controlId="formConfirmSignupPassword">
+        <Form.Group className="mb-3" controlId="formConfirmSignupPassword">
           <Form.Label>Confirm Password:</Form.Label>
           <Form.Control
             type="password"
@@ -120,7 +120,7 @@ function SignupJobseeker() {
           <Form.Text className="text-muted d-none">
             We'll never share your email with anyone else.
           </Form.Text>
-        </Form.Group> */}
+        </Form.Group>
         <Button variant="primary" type="submit">
           Submit
         </Button>
