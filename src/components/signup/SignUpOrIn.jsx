@@ -11,11 +11,14 @@ function SignUpOrIn() {
   };
 
   return (
-    <div className="container mt-5 pt-3">
-      <div className="d-none">
-        <Image src={coverGuy} alt="cover" fluid style={{ maxHeight: "95em" }} />
+    <div
+      className="container mt-5 pt-3 d-md-flex justify-content-around"
+      style={{ maxHeight: "90vh" }}
+    >
+      <div className="d-none d-md-block">
+        <Image src={coverGuy} alt="cover" fluid className="mh-100" />
       </div>
-      <div>
+      <div style={{ minWidth: "300px" }}>
         <h2 className="fw-bold">Signup</h2>
         <div className="d-flex fw-bold fs-5">
           <p
