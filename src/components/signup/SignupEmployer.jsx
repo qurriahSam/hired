@@ -1,18 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useMutation } from "react-query";
+import { UserContext } from "../../userContext/userContext";
 import { signupEmployer } from "../hooks/useUsers";
 
 function SignupJobseeker() {
-  const [user, setUser] = React.useState({});
+  const { setUser } = useContext(UserContext);
   const [newEmployer, setNewEmployer] = React.useState({
     user_name: "",
     first_name: "",
     last_name: "",
     email: "",
     role: "employer",
-    password: "1",
+    password: "",
     company_name: "",
     admin_id: "1",
   });
@@ -20,13 +21,8 @@ function SignupJobseeker() {
   const { mutate } = useMutation(signupEmployer, {
     onSuccess: (data) => {
       setUser(() => data);
-      console.log(data);
     },
   });
-
-  React.useEffect(() => {
-    localStorage.setItem("user", JSON.stringify(user));
-  }, [user]);
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
