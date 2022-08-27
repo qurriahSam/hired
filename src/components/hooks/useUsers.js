@@ -52,3 +52,9 @@ export const signin = async (userObj) => {
     console.log("error", error);
   }
 };
+
+export const logout = async () => {
+  const url = "http://localhost:3000/logout";
+  const response = await fetch(url, { method: "DELETE" });
+  return response;
+};
