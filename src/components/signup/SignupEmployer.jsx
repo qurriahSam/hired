@@ -20,7 +20,7 @@ function SignupJobseeker() {
 
   const { mutate } = useMutation(signupEmployer, {
     onSuccess: (data) => {
-      setUser(() => data);
+      data.id ? setUser(() => data) : console.log(data);
     },
   });
 
