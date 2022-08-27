@@ -40,7 +40,25 @@ const TopNav = () => {
             </Nav.Link>
             <Nav.Link className="fw-semibold ms-lg-5 pb-3 pb-lg-0">Post a Job</Nav.Link>
           </Nav>
-          <Nav className="fw-semibold pe-3 pb-3 pb-lg-0">
+
+          <Nav className={`me-auto ${user?.role === "jobseeker" ? "d-flex" : "d-none"}`}>
+            <Nav.Link className="fw-semibold">Profile</Nav.Link>
+            <Nav.Link className="fw-semibold">Offers</Nav.Link>
+          </Nav>
+
+          <Nav className={`me-auto ${user?.role === "employer" ? "d-flex" : "d-none"}`}>
+            <Nav.Link className="fw-semibold">Home</Nav.Link>
+            <Nav.Link className="fw-semibold">Profile</Nav.Link>
+            <Nav.Link className="fw-semibold">Offers</Nav.Link>
+            <Nav.Link className="fw-semibold">Employees</Nav.Link>
+          </Nav>
+
+          <Nav className={`me-auto ${user?.role === "admin" ? "d-flex" : "d-none"}`}>
+            <Nav.Link className="fw-semibold">Approve Files</Nav.Link>
+            <Nav.Link className="fw-semibold">Manage Accounts</Nav.Link>
+          </Nav>
+
+          <Nav className="fw-semibold pe-3 pb-3 pb-lg-0 align-items-center">
             {user ? (
               <Link to="/" className="text-dark text-decoration-none" onClick={handleLogout}>
                 Logout
