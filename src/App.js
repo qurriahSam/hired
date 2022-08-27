@@ -12,6 +12,7 @@ import Termination from "./components/termination/termination";
 import ApproveFiles from "./components/approveFiles/ApproveFiles";
 import Login from "./components/login/Login";
 import EmployeeProfile from "./components/profiles/EmployeeProfile";
+import EmployerProfile from "./components/profiles/JobSeekerInfo";
 import { UserContext } from "./userContext/userContext";
 
 function App() {
@@ -51,6 +52,11 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/approveFiles" element={<ApproveFiles />} />
             <Route path="/jobseekerprofile" element={<EmployeeProfile />} />
+            <Route path="/employerprofile" element={<EmployerProfile />} />
+            <Route path="/joboffers" element={<AcceptDecline />} />
+            <Route path="/employeemanagement" element={<Termination />} />
+            <Route path="/manageaccounts" element={<Account />} />
+            <Route path="/offers" element={<JobSeekerVarification />} />
           </Routes>
         </div>
       </UserContext.Provider>

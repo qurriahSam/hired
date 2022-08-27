@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useMutation } from "react-query";
+import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../userContext/userContext";
 import { signupEmployer } from "../hooks/useUsers";
 
@@ -17,10 +18,17 @@ function SignupJobseeker() {
     company_name: "",
     admin_id: "1",
   });
+  const navigate = useNavigate();
 
   const { mutate } = useMutation(signupEmployer, {
     onSuccess: (data) => {
-      data.id ? setUser(() => data) : console.log(data);
+      if (data.id) {
+        setUser(data);
+        console.log("employer signup success", data);
+        navigate("/employerprofile");
+      } else {
+        console.log("employer signup error", data);
+      }
     },
   });
 
