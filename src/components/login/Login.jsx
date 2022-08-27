@@ -22,6 +22,8 @@ function Login() {
         setUser(() => data);
         if (data.role === "jobseeker") {
           navigate("/jobseekerprofile");
+        } else if (data.role === "employer") {
+          navigate("/employeemanagement");
         }
       } else {
         console.log(data.error);
