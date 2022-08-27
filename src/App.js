@@ -10,6 +10,7 @@ import SignUp from "./components/signup/SignUp";
 import Account from "./components/manageAccounts/Account";
 import Termination from "./components/termination/termination";
 import ApproveFiles from "./components/approveFiles/ApproveFiles";
+import Login from "./components/login/Login";
 import { UserContext } from "./userContext/userContext";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/signup" element={<SignUp />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/approveFiles" element={<ApproveFiles />} />
           </Routes>
         </div>
