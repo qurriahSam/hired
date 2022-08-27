@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useMutation } from "react-query";
+import { useNavigate } from "react-router-dom";
+import { UserContext } from "../../userContext/userContext";
 import { signupUsers } from "../hooks/useUsers";
 
 function SignupJobseeker() {
-  const [user, setUser] = React.useState({});
+  const { user, setUser } = useContext(UserContext);
+  const navigate = useNavigate();
+
   const [newJobseeker, setNewJobseeker] = React.useState({
     user_name: "",
     first_name: "",
@@ -18,14 +22,15 @@ function SignupJobseeker() {
 
   const { mutate } = useMutation(signupUsers, {
     onSuccess: (data) => {
-      console.log(data);
-      setUser(data);
+      if (data.id) {
+        setUser(data);
+        console.log("jobseeker signup success", data);
+        navigate("/jobseekerprofile");
+      } else {
+        console.log("jobseeker signup error", data);
+      }
     },
   });
-
-  React.useEffect(() => {
-    localStorage.setItem("user", JSON.stringify(user));
-  }, [user]);
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
