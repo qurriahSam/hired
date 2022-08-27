@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 
 //import Account from "./components/approveFiles/Jobseekers";
@@ -11,12 +11,34 @@ import Account from "./components/manageAccounts/Account";
 import Termination from "./components/termination/termination";
 import ApproveFiles from "./components/approveFiles/ApproveFiles";
 import Login from "./components/login/Login";
+import EmployeeProfile from "./components/profiles/EmployeeProfile";
 import { UserContext } from "./userContext/userContext";
 
 function App() {
   const [user, setUser] = useState(null);
 
   const value = useMemo(() => ({ user, setUser }), [user, setUser]);
+
+  useEffect(() => {
+    console.log(user);
+  }, [user]);
+
+  //  useEffect(() => {
+  //    fetch("http://localhost:3000/auth").then((r) => {
+  //      if (r.ok) {
+  //        r.json().then((user) => {
+  //          setUser(() => user);
+  //          console.log("logged", user);
+  //          /*if (user) {
+  //            navigate("/dashboard");
+  //          } */
+  //        });
+  //      } else {
+  //        console.log(r);
+  //      }
+  //    });
+  //    // eslint-disable-next-line react-hooks/exhaustive-deps
+  //  }, []);
 
   return (
     <>
@@ -28,6 +50,7 @@ function App() {
             <Route path="/signup" element={<SignUp />} />
             <Route path="/login" element={<Login />} />
             <Route path="/approveFiles" element={<ApproveFiles />} />
+            <Route path="/jobseekerprofile" element={<EmployeeProfile />} />
           </Routes>
         </div>
       </UserContext.Provider>
