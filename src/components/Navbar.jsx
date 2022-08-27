@@ -5,9 +5,23 @@ import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { UserContext } from "../userContext/userContext";
+import { useMutation } from "react-query";
+import { logout } from "./hooks/useUsers";
 
 const TopNav = () => {
   const { user, setUser } = useContext(UserContext);
+
+  const { mutate } = useMutation(logout, {
+    onSuccess: () => {
+      setUser(() => null);
+      console.log("logged out");
+    },
+  });
+
+  const handleLogout = () => {
+    mutate();
+  };
+
   return (
     <Navbar bg="light" expand="lg" fixed="top" variant="light">
       <Container>
@@ -28,7 +42,7 @@ const TopNav = () => {
           </Nav>
           <Nav className="fw-semibold pe-3 pb-3 pb-lg-0">
             {user ? (
-              <Link to="/" className="text-dark text-decoration-none" onClick={() => setUser(null)}>
+              <Link to="/" className="text-dark text-decoration-none" onClick={handleLogout}>
                 Logout
               </Link>
             ) : (
