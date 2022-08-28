@@ -12,8 +12,9 @@ import Termination from "./components/termination/termination";
 import ApproveFiles from "./components/approveFiles/ApproveFiles";
 import Login from "./components/login/Login";
 import EmployeeProfile from "./components/profiles/employee/EmployeeProfile";
-import EmployerProfile from "./components/profiles/JobSeekerInfo";
+import EmployerProfile from "./components/profiles/EmployerProfile";
 import { UserContext } from "./userContext/userContext";
+import Dashboard from "./components/employerDashboard/Dashboard";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -57,6 +58,7 @@ function App() {
             <Route path="/employeemanagement" element={<Termination />} />
             <Route path="/manageaccounts" element={<Account />} />
             <Route path="/offers" element={<JobSeekerVarification />} />
+            <Route path="/dashboard" element={<Dashboard />} />
           </Routes>
         </div>
       </UserContext.Provider>
