@@ -55,7 +55,6 @@ export const ProfilePicSection = () => {
                   <td>5 years</td>
                 </tr>
                 <tr>
-                  <td>Availability:</td>
                   <td>
                     <ButtonGroup>
                       {radios.map((radio, idx) => (
