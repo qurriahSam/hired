@@ -3,7 +3,6 @@ import girlReviewImg from "../../images/ladyreview.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPencil } from "@fortawesome/free-solid-svg-icons";
 import Card from "react-bootstrap/Card";
-
 import Table from "react-bootstrap/Table";
 
 const EmployerProfile = () => {
@@ -25,32 +24,34 @@ const EmployerProfile = () => {
             <Card.Subtitle className="text-secondary fw-bold fs-6">Company Name</Card.Subtitle>
           </div>
           <div>
-            <div className="">
-              <Table borderless size="sm">
-                <tbody>
-                  <tr>
-                    <td>Username:</td>
-                    <td>jane doe</td>
-                  </tr>
-                  <tr>
-                    <td>Email:</td>
-                    <td>sample@gmail.com</td>
-                  </tr>
-                  <tr>
-                    <td>Phone:</td>
-                    <td>+254123456</td>
-                  </tr>
-                  <tr>
-                    <td>Subscription:</td>
-                    <td>active</td>
-                  </tr>
-                  <tr>
-                    <td>Experience:</td>
-                    <td>5 years</td>
-                  </tr>
-                </tbody>
-              </Table>
-            </div>
+            <Table borderless size="sm">
+              <tbody>
+                <tr>
+                  <td>Username:</td>
+                  <td>jane doe</td>
+                </tr>
+                <tr>
+                  <td>Email:</td>
+                  <td>sample@gmail.com</td>
+                </tr>
+                <tr>
+                  <td>Phone:</td>
+                  <td>+254123456</td>
+                </tr>
+                <tr>
+                  <td>Subscription:</td>
+                  <td>active</td>
+                </tr>
+                <tr>
+                  <td>Experience:</td>
+                  <td>5 years</td>
+                </tr>
+                <tr>
+                  <td>Employees:</td>
+                  <td>5</td>
+                </tr>
+              </tbody>
+            </Table>
           </div>
         </Card.Body>
       </Card>
