@@ -12,7 +12,7 @@ import Termination from "./components/termination/termination";
 import ApproveFiles from "./components/approveFiles/ApproveFiles";
 import Login from "./components/login/Login";
 import EmployeeProfile from "./components/profiles/employee/EmployeeProfile";
-import EmployerProfile from "./components/profiles/JobSeekerInfo";
+import EmployerProfile from "./components/profiles/EmployerProfile";
 import { UserContext } from "./userContext/userContext";
 
 function App() {
