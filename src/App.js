@@ -11,7 +11,7 @@ import Account from "./components/manageAccounts/Account";
 import Termination from "./components/termination/termination";
 import ApproveFiles from "./components/approveFiles/ApproveFiles";
 import Login from "./components/login/Login";
-import EmployeeProfile from "./components/profiles/EmployeeProfile";
+import EmployeeProfile from "./components/profiles/employee/EmployeeProfile";
 import EmployerProfile from "./components/profiles/JobSeekerInfo";
 import { UserContext } from "./userContext/userContext";
 
