@@ -4,7 +4,7 @@ import DeleteEmployeeCard from "./DeleteEmployeeCard";
 function Jobseekers() {
   return (
     <div className="container">
-      <div class="row row-cols-auto">
+      <div className="row row-cols-auto">
         <DeleteEmployeeCard />
         <DeleteEmployeeCard />
         <DeleteEmployeeCard />
