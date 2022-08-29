@@ -1,7 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Routes, Route } from "react-router-dom";
-
-//import Account from "./components/approveFiles/Jobseekers";
 import LandingPage from "./components/landingpage/LandingPage";
 import TopNav from "./components/Navbar";
 import JobSeekerVarification from "./components/profiles/JobSeekerVarification";
