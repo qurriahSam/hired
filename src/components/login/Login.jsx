@@ -24,9 +24,11 @@ function Login() {
           navigate("/jobseekerprofile");
         } else if (data.role === "employer") {
           navigate("/employeemanagement");
+        } else if (data.role === "Admin") {
+          navigate("/approveFiles");
+        } else {
+          console.log(data.error);
         }
-      } else {
-        console.log(data.error);
       }
     },
   });
