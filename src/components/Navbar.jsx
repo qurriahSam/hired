@@ -59,15 +59,27 @@ const TopNav = () => {
             </Nav>
 
             <Nav className={`me-auto ${user?.role === "employer" ? "d-flex" : "d-none"}`}>
-              <Nav.Link className="fw-semibold">Home</Nav.Link>
-              <Nav.Link className="fw-semibold">Profile</Nav.Link>
-              <Nav.Link className="fw-semibold">Offers</Nav.Link>
-              <Nav.Link className="fw-semibold">Employees</Nav.Link>
+              <Link to="/dashboard" className="fw-semibold">
+                Home
+              </Link>
+              <Link to="/employerprofile" className="fw-semibold">
+                Profile
+              </Link>
+              <Link to="/offers" className="fw-semibold">
+                Offers
+              </Link>
+              <Link to="/employeemanagement" className="fw-semibold">
+                Employees
+              </Link>
             </Nav>
 
-            <Nav className={`me-auto ${user?.role === "admin" ? "d-flex" : "d-none"}`}>
-              <Nav.Link className="fw-semibold">Approve Files</Nav.Link>
-              <Nav.Link className="fw-semibold">Manage Accounts</Nav.Link>
+            <Nav className={`me-auto ${user?.role === "Admin" ? "d-flex" : "d-none"}`}>
+              <Link to="/approveFiles" className="fw-semibold">
+                Approve Files
+              </Link>
+              <Link to="/manageaccounts" className="fw-semibold">
+                Manage Accounts
+              </Link>
             </Nav>
 
             <Nav className="fw-semibold pe-3 pb-3 pb-lg-0">
