@@ -4,9 +4,9 @@ import Navbar from "react-bootstrap/Navbar";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
-import { UserContext } from "../userContext/userContext";
+import { UserContext } from "./userContext/userContext";
 import { useMutation } from "react-query";
-import { logout } from "./hooks/useUsers";
+import { logout } from "./components/hooks/useUsers";
 
 const TopNav = () => {
   const { user, setUser } = useContext(UserContext);
