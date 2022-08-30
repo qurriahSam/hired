@@ -5,13 +5,15 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { faFolder } from "@fortawesome/free-solid-svg-icons";
 
-const ApproveFileContainer = () => {
+const ApproveFileContainer = ({ employee: { id, first_name, last_name, email, profile } }) => {
   return (
-    <Card className="shadow-sm mx-auto mb-3">
+    <Card id={id} className="shadow-sm mx-auto mb-3">
       <Card.Body className="d-md-flex justify-content-between">
         <Card.Text className="fw-semibold text-black mb-0"></Card.Text>
-        <Card.Text className="fw-semibold mb-0">JobSeekerName</Card.Text>
-        <Card.Text className="fw-semibold my-1 my-md-0">Email@gmail</Card.Text>
+        <Card.Text className="fw-semibold mb-0">
+          {first_name} {last_name}
+        </Card.Text>
+        <Card.Text className="fw-semibold my-1 my-md-0">{email}</Card.Text>
         <div className="d-flex">
           <FontAwesomeIcon icon={faFolder} className="mt-1" color="gray" />
           <Card.Text className="fw-semibold mb-0">Resume</Card.Text>
