@@ -2,7 +2,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Button from "react-bootstrap/Button";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { UserContext } from "../userContext/userContext";
 import { useMutation } from "react-query";
@@ -10,10 +10,13 @@ import { logout } from "./hooks/useUsers";
 
 const TopNav = () => {
   const { user, setUser } = useContext(UserContext);
+  const naivgate = useNavigate();
 
   const { mutate } = useMutation(logout, {
     onSuccess: () => {
       setUser(() => null);
+      localStorage.removeItem("user");
+      Navigate("/");
       console.log("logged out");
     },
   });
