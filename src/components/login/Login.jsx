@@ -25,7 +25,7 @@ function Login() {
           navigate("/jobseekerprofile");
         } else if (data.role === "employer") {
           navigate("/employeemanagement");
-        } else if (data.role === "Admin") {
+        } else if (data.role === "admin") {
           navigate("/approveFiles");
         } else {
           console.log(data);
