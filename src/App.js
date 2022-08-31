@@ -19,10 +19,6 @@ function App() {
 
   const value = useMemo(() => ({ user, setUser }), [user, setUser]);
 
-  useEffect(() => {
-    console.log(user);
-  }, [user]);
-
   //  useEffect(() => {
   //    fetch("http://localhost:3000/auth").then((r) => {
   //      if (r.ok) {
