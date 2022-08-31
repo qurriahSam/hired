@@ -24,5 +24,6 @@ Hired is a job seeking app,where employers can visit, and just browse through ve
 - Sam Kuria (https://github.com/qurriahSam)
 - Desmond Kinoti (https://github.com/desmond107)
 - Precious Mutheu (https://github.com/mutheuprecious)
-
+- Cathrine Vuthi (https://github.com/esthercate)
+- Samuel Hinga (https://github.com/SKHinga)
 
