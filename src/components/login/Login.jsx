@@ -28,7 +28,7 @@ function Login() {
         } else if (data.role === "Admin") {
           navigate("/approveFiles");
         } else {
-          console.log(data.error);
+          console.log(data);
         }
       }
     },
