@@ -23,7 +23,9 @@ function Employers() {
   };
 
   const deleteUser = (id) => {
-    fetch(`http://localhost:3000/employers/${id}`, { method: "DELETE" }).then(() => {
+
+    fetch(`/employers/${id}`, { method: "DELETE" }).then(() => {
+
       handleDelete(id);
     });
   };

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import girlReviewImg from "../../images/ladyreview.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPencil } from "@fortawesome/free-solid-svg-icons";
