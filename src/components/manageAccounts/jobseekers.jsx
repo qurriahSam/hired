@@ -7,7 +7,7 @@ function Jobseekers() {
   useEffect(() => {
     const employeeFetch = async () => {
       try {
-        const response = await fetch(`/job_seekers`);
+        const response = await fetch(`https://hired-app-api.herokuapp.com/job_seekers`);
         const data = await response.json();
         setJobSeekers(data);
       } catch (error) {

@@ -1,6 +1,6 @@
 export const signupUsers = async (userObj) => {
   try {
-    const url = "/job_seekers";
+    const url = "https://hired-app-api.herokuapp.com/job_seekers";
     const response = await fetch(url, {
       method: "POST",
       mode: "cors",
@@ -17,7 +17,7 @@ export const signupUsers = async (userObj) => {
 
 export const signupEmployer = async (employerObj) => {
   try {
-    const url = "/employers";
+    const url = "https://hired-app-api.herokuapp.com/employers";
     const response = await fetch(url, {
       method: "POST",
       mode: "cors",
@@ -36,7 +36,7 @@ export const signupEmployer = async (employerObj) => {
 
 export const signin = async (userObj) => {
   try {
-    const url = "/login";
+    const url = "https://hired-app-api.herokuapp.com/login";
     const response = await fetch(url, {
       method: "POST",
       mode: "cors",
@@ -54,7 +54,7 @@ export const signin = async (userObj) => {
 };
 
 export const logout = async () => {
-  const url = "/logout";
+  const url = "https://hired-app-api.herokuapp.com/logout";
   const response = await fetch(url, { method: "DELETE" });
   return response;
 };

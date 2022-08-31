@@ -7,7 +7,7 @@ function Employers() {
   useEffect(() => {
     const employerFetch = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/employers`);
+        const response = await fetch(`https://hired-app-api.herokuapp.com/employers`);
         const data = await response.json();
         setEmployers(data);
       } catch (error) {
@@ -23,9 +23,7 @@ function Employers() {
   };
 
   const deleteUser = (id) => {
-
     fetch(`/employers/${id}`, { method: "DELETE" }).then(() => {
-
       handleDelete(id);
     });
   };

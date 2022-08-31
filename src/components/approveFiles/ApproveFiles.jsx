@@ -7,7 +7,7 @@ const ApproveFiles = () => {
   useEffect(() => {
     const employerFetch = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/job_seekers`);
+        const response = await fetch(`https://hired-app-api.herokuapp.com/job_seekers`);
         const data = await response.json();
         setJobseekerFiles(data);
       } catch (error) {
