@@ -4,8 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPencil } from "@fortawesome/free-solid-svg-icons";
 import Card from "react-bootstrap/Card";
 import Table from "react-bootstrap/Table";
+import { UserContext } from "../../userContext/userContext";
 
 const EmployerProfile = () => {
+  const { user, setUser } = useContext(UserContext);
+
   return (
     <div className="container mt-3" style={{ maxWidth: "40em" }}>
       <Card className="shadow-sm">
@@ -20,35 +23,35 @@ const EmployerProfile = () => {
               className="rounded-circle mx-auto"
               style={{ maxWidth: "10em" }}
             ></Card.Img>
-            <Card.Title className="fw-bold pt-2">Recruiter Name</Card.Title>
-            <Card.Subtitle className="text-secondary fw-bold fs-6">Company Name</Card.Subtitle>
+            <Card.Title className="fw-bold pt-2">
+              {user.first_name} {user.last_name}
+            </Card.Title>
+            <Card.Subtitle className="text-secondary fw-bold fs-6">
+              {user.company_name}
+            </Card.Subtitle>
           </div>
           <div>
             <Table borderless size="sm">
               <tbody>
                 <tr>
                   <td>Username:</td>
-                  <td>jane doe</td>
+                  <td>{user.user_name}</td>
                 </tr>
                 <tr>
                   <td>Email:</td>
-                  <td>sample@gmail.com</td>
+                  <td>{user.email}</td>
                 </tr>
                 <tr>
                   <td>Phone:</td>
-                  <td>+254123456</td>
+                  <td>{user.phone_number ? user.phone_number : "not set"}</td>
                 </tr>
                 <tr>
                   <td>Subscription:</td>
-                  <td>active</td>
-                </tr>
-                <tr>
-                  <td>Experience:</td>
-                  <td>5 years</td>
+                  <td>{user.subscription ? "active" : "not subscribed"}</td>
                 </tr>
                 <tr>
                   <td>Employees:</td>
-                  <td>5</td>
+                  <td>{user.job_seekers.length}</td>
                 </tr>
               </tbody>
             </Table>
