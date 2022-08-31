@@ -23,9 +23,11 @@ function Jobseekers() {
   };
 
   const deleteUser = (id) => {
-    fetch(`http://localhost:3000/job_seekers/${id}`, { method: "DELETE" }).then(() => {
-      handleDelete(id);
-    });
+    fetch(`https://hired-app-api.herokuapp.com/job_seekers/${id}`, { method: "DELETE" }).then(
+      () => {
+        handleDelete(id);
+      }
+    );
   };
 
   const displayJobseekers = jobseekers.map((jobseeker) => (
