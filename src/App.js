@@ -39,7 +39,7 @@ function App() {
   useEffect(() => {
     const getLoggedUser = localStorage.getItem("user");
     const loggedUser = JSON.parse(getLoggedUser);
-    if (loggedUser.id) {
+    if (loggedUser?.id) {
       setUser(loggedUser);
     }
   }, []);
