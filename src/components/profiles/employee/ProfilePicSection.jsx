@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 import girlReviewImg from "../../../images/ladyreview.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPencil } from "@fortawesome/free-solid-svg-icons";
@@ -7,8 +7,10 @@ import ButtonGroup from "react-bootstrap/ButtonGroup";
 import ToggleButton from "react-bootstrap/ToggleButton";
 import Table from "react-bootstrap/Table";
 
-export const ProfilePicSection = () => {
+export const ProfilePicSection = ({see}) => {
   const [radioValue, setRadioValue] = useState("unavailable");
+
+  
 
   const radios = [
     { name: "Available", value: "available" },
@@ -16,8 +18,8 @@ export const ProfilePicSection = () => {
   ];
   return (
     <Card className="shadow-sm">
-      <span className="d-flex justify-content-end pe-4 pt-3">
-        <FontAwesomeIcon icon={faPencil} color="gray" />
+      <span className="d-flex justify-content-end pe-4 pt-3" >
+        <FontAwesomeIcon icon={faPencil} color="gray" onClick={() => see(true)}/>
       </span>
 
       <Card.Body className="d-md-flex justify-content-between">

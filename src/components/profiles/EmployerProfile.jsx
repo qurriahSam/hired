@@ -1,4 +1,3 @@
-import React from "react";
 import girlReviewImg from "../../images/ladyreview.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPencil } from "@fortawesome/free-solid-svg-icons";
@@ -6,6 +5,8 @@ import Card from "react-bootstrap/Card";
 import Table from "react-bootstrap/Table";
 
 const EmployerProfile = () => {
+
+
   return (
     <div className="container mt-3" style={{ maxWidth: "40em" }}>
       <Card className="shadow-sm">
