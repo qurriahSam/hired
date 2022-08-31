@@ -2,7 +2,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Button from "react-bootstrap/Button";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { UserContext } from "../userContext/userContext";
 import { useMutation } from "react-query";
@@ -10,13 +10,13 @@ import { logout } from "./hooks/useUsers";
 
 const TopNav = () => {
   const { user, setUser } = useContext(UserContext);
-  const naivgate = useNavigate();
+  const navigate = useNavigate();
 
   const { mutate } = useMutation(logout, {
     onSuccess: () => {
       setUser(() => null);
       localStorage.removeItem("user");
-      Navigate("/");
+      navigate("/");
       console.log("logged out");
     },
   });
@@ -76,7 +76,7 @@ const TopNav = () => {
               </Link>
             </Nav>
 
-            <Nav className={`me-auto ${user?.role === "Admin" ? "d-flex" : "d-none"}`}>
+            <Nav className={`me-auto ${user?.role === "admin" ? "d-flex" : "d-none"}`}>
               <Link to="/approveFiles" className="fw-semibold">
                 Approve Files
               </Link>
