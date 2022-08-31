@@ -23,7 +23,7 @@ function Employers() {
   };
 
   const deleteUser = (id) => {
-    fetch(`/employers/${id}`, { method: "DELETE" }).then(() => {
+    fetch(`https://hired-app-api.herokuapp.com/employers/${id}`, { method: "DELETE" }).then(() => {
       handleDelete(id);
     });
   };
