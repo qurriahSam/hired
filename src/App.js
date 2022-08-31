@@ -40,6 +40,14 @@ function App() {
   //    // eslint-disable-next-line react-hooks/exhaustive-deps
   //  }, []);
 
+  useEffect(() => {
+    const getLoggedUser = localStorage.getItem("user");
+    const loggedUser = JSON.parse(getLoggedUser);
+    if (loggedUser.id) {
+      setUser(loggedUser);
+    }
+  }, []);
+
   return (
     <>
       <UserContext.Provider value={value}>

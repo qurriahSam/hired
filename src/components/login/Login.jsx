@@ -18,6 +18,7 @@ function Login() {
 
   const { mutate } = useMutation(signin, {
     onSuccess: (data) => {
+      localStorage.setItem("user", JSON.stringify(data));
       if (data.id) {
         setUser(() => data);
         if (data.role === "jobseeker") {
