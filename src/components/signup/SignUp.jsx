@@ -11,10 +11,7 @@ function SignUp() {
   };
 
   return (
-    <div
-      className="container mt-5 pt-3 d-md-flex justify-content-around"
-      style={{ maxHeight: "90vh" }}
-    >
+    <div className="container d-md-flex justify-content-around" style={{ maxHeight: "90vh" }}>
       <div className="d-none d-md-block">
         <Image src={coverGuy} alt="cover" fluid className="mh-100" />
       </div>
