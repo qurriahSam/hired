@@ -49,7 +49,12 @@ const TopNav = () => {
               <Nav.Link href="#reviews" className="fw-semibold ms-lg-5">
                 Reviews
               </Nav.Link>
-              <Nav.Link className="fw-semibold ms-lg-5 pb-3 pb-lg-0">Post a Job</Nav.Link>
+              <Link
+                to="/signup"
+                className="fw-semibold ms-lg-5 pb-3 pb-lg-0 text-decoration-none nav-link"
+              >
+                Post a Job
+              </Link>
             </Nav>
 
             <Nav className={`me-auto ${user?.role === "jobseeker" ? "d-flex" : "d-none"}`}>
@@ -62,25 +67,25 @@ const TopNav = () => {
             </Nav>
 
             <Nav className={`me-auto ${user?.role === "employer" ? "d-flex" : "d-none"}`}>
-              <Link to="/dashboard" className="fw-semibold">
+              <Link to="/dashboard" className="fw-semibold text-decoration-none nav-link">
                 Home
               </Link>
-              <Link to="/employerprofile" className="fw-semibold">
+              <Link to="/employerprofile" className="fw-semibold text-decoration-none nav-link">
                 Profile
               </Link>
-              <Link to="/offers" className="fw-semibold">
+              <Link to="/offers" className="fw-semibold text-decoration-none nav-link">
                 Offers
               </Link>
-              <Link to="/employeemanagement" className="fw-semibold">
+              <Link to="/employeemanagement" className="fw-semibold text-decoration-none nav-link">
                 Employees
               </Link>
             </Nav>
 
             <Nav className={`me-auto ${user?.role === "admin" ? "d-flex" : "d-none"}`}>
-              <Link to="/approveFiles" className="fw-semibold">
+              <Link to="/approveFiles" className="fw-semibold text-decoration-none nav-link">
                 Approve Files
               </Link>
-              <Link to="/manageaccounts" className="fw-semibold">
+              <Link to="/manageaccounts" className="fw-semibold text-decoration-none nav-link">
                 Manage Accounts
               </Link>
             </Nav>
