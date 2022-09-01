@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useRef} from "react";
 import Button from 'react-bootstrap/Button';
 import Card from "react-bootstrap/Card";
 import Modal from 'react-bootstrap/Modal';
@@ -12,6 +12,7 @@ import girlReviewImg from "../../../images/ladyreview.jpg";
 const EmployerEdit = (props) => {
 
   const [imageToPost, setImageToPost] = useState(null);
+  const filePikerRef = useRef(null)
 
   const addImageToPost = (e) => {
 
@@ -41,9 +42,12 @@ const EmployerEdit = (props) => {
                   className="rounded-circle mx-auto mb-3"
                   style={{ maxWidth: "10em" }}
                 ></Card.Img>
+                <div className="d-flex mx-auto" role="button" onClick={()=> filePikerRef.current.click()}>
+                  <div><FontAwesomeIcon icon={faCamera} color="blue"/></div>
+                  <p className="px-1">Photo</p>
+                </div>
                 <div>
-                  <FontAwesomeIcon icon={faCamera} color="blue" className="mb-3 "/>
-                  
+                  <input type='file' onChange={addImageToPost} ref={filePikerRef} className='invisible'/>
                 </div>
               </div>
               <div className="w-50 mx-auto">
