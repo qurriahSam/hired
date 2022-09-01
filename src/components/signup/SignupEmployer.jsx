@@ -25,7 +25,7 @@ function SignupJobseeker() {
       if (data.id) {
         setUser(data);
         console.log("employer signup success", data);
-        navigate("/employerprofile");
+        navigate("/dashboard");
       } else {
         console.log("employer signup error", data);
       }
