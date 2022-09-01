@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import LandingPage from "./components/landingpage/LandingPage";
 import TopNav from "./components/Navbar";
 import JobSeekerVarification from "./components/profiles/JobSeekerVarification";
@@ -16,6 +16,7 @@ import Dashboard from "./components/employerDashboard/Dashboard";
 
 function App() {
   const [user, setUser] = useState(null);
+  const navigate = useNavigate();
 
   const value = useMemo(() => ({ user, setUser }), [user, setUser]);
 
@@ -41,6 +42,15 @@ function App() {
     const loggedUser = JSON.parse(getLoggedUser);
     if (loggedUser?.id) {
       setUser(loggedUser);
+      if (loggedUser.role === "jobseeker") {
+        navigate("/jobseekerprofile");
+      } else if (loggedUser.role === "employer") {
+        navigate("/employeemanagement");
+      } else if (loggedUser.role === "admin") {
+        navigate("/approveFiles");
+      } else {
+        console.log(loggedUser);
+      }
     }
   }, []);
 
