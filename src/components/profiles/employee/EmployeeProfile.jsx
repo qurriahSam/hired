@@ -10,10 +10,6 @@ import EmployerEdit from "./EmployeeEdit";
 function EmployeeProfile() {
   const [modalShow, setModalShow] = useState(false);
 
-  const handleView = (view) => {
-    setModalShow(view)
-  }
-
   return (
     <div>
       {modalShow?(<EmployerEdit
@@ -21,7 +17,7 @@ function EmployeeProfile() {
         onHide={() => setModalShow(false)}
       />):null}
       <div className="container mt-3" style={{ maxWidth: "40em" }}>
-        <ProfilePicSection see={handleView}/>
+        <ProfilePicSection see={()=>setModalShow(true)}/>
         <Card className="shadow-sm mt-4">
           <span className="d-flex justify-content-end pe-4 pt-3"></span>
           <Card.Body>

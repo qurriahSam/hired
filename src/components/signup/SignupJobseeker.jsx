@@ -10,6 +10,8 @@ function SignupJobseeker() {
   const { user, setUser } = useContext(UserContext);
   const navigate = useNavigate();
 
+  console.log(user);
+
   const [newJobseeker, setNewJobseeker] = React.useState({
     user_name: "",
     first_name: "",

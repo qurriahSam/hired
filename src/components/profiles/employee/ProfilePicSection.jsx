@@ -19,7 +19,7 @@ export const ProfilePicSection = ({see}) => {
   return (
     <Card className="shadow-sm">
       <span className="d-flex justify-content-end pe-4 pt-3" >
-        <FontAwesomeIcon icon={faPencil} color="gray" onClick={() => see(true)}/>
+        <FontAwesomeIcon icon={faPencil} color="gray" onClick={see}/>
       </span>
 
       <Card.Body className="d-md-flex justify-content-between">
