@@ -107,6 +107,8 @@ const EmployerEdit = (props) => {
   //   .then((updatedPro) => console.log(updatedPro));
   // }
 
+  console.log(error);
+
   return (
     <div>
       <Modal
@@ -178,13 +180,13 @@ const EmployerEdit = (props) => {
                 <div>
                   <input name="resume" value={personData.resume} onChange={handleChange} type='file' ref={resumePikerRef} className='invisible'/>
                 </div>
-                {error?.length > 0 && (
+                {/* {error?.length > 0 && (
                   <ul style={{ color: "red" }}>
                     {error.map((error) => (
                       <li className='ml-2 text-red-400' key={error}>{error}</li>
                     ))}
                   </ul>
-                )}
+                )} */}
               </div>
             </div>
           </Modal.Body>

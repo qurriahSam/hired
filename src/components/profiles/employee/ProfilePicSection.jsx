@@ -55,7 +55,7 @@ export const ProfilePicSection = ({see}) => {
                 </tr>
                 <tr>
                   <td>Experience:</td>
-                  <td>{user.profile.experience_years}</td>
+                  <td>3</td>
                 </tr>
                 <tr>
                   <td>
