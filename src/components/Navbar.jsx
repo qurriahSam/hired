@@ -3,13 +3,15 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Button from "react-bootstrap/Button";
 import { Link, useNavigate } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { UserContext } from "../userContext/userContext";
 import { useMutation } from "react-query";
 import { logout } from "./hooks/useUsers";
+import SubscribeModal from "./SubscribeModal";
 
 const TopNav = () => {
   const { user, setUser } = useContext(UserContext);
+  const [subscribeModalShow, setSubscribeModalShow] = useState(false);
   const navigate = useNavigate();
 
   const { mutate } = useMutation(logout, {
@@ -76,6 +78,12 @@ const TopNav = () => {
               <Link to="/offers" className="fw-semibold text-decoration-none nav-link">
                 Offers
               </Link>
+              <Nav.Link
+                className="fw-semibold text-decoration-none nav-link"
+                onClick={() => setSubscribeModalShow(true)}
+              >
+                Subscribe
+              </Nav.Link>
               <Link to="/employeemanagement" className="fw-semibold text-decoration-none nav-link">
                 Employees
               </Link>
@@ -109,6 +117,7 @@ const TopNav = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+      <SubscribeModal show={subscribeModalShow} onHide={() => setSubscribeModalShow(false)} />
     </>
   );
 };
