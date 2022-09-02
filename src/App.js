@@ -39,17 +39,21 @@ function App() {
 
   useEffect(() => {
     const getLoggedUser = localStorage.getItem("user");
-    const loggedUser = JSON.parse(getLoggedUser);
-    if (loggedUser?.id) {
-      setUser(loggedUser);
-      if (loggedUser.role === "jobseeker") {
-        navigate("/jobseekerprofile");
-      } else if (loggedUser.role === "employer") {
-        navigate("/employeemanagement");
-      } else if (loggedUser.role === "admin") {
-        navigate("/approveFiles");
-      } else {
-        console.log(loggedUser);
+    console.log();
+    if (typeof getLoggedUser === "string") {
+      const loggedUser = JSON.parse(getLoggedUser);
+      setUser(() => loggedUser);
+      if (loggedUser?.id) {
+        setUser(loggedUser);
+        if (loggedUser.role === "jobseeker") {
+          navigate("/jobseekerprofile");
+        } else if (loggedUser.role === "employer") {
+          navigate("/employeemanagement");
+        } else if (loggedUser.role === "admin") {
+          navigate("/approveFiles");
+        } else {
+          console.log(loggedUser);
+        }
       }
     }
   }, []);
