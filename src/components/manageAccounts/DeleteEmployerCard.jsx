@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import girlReviewImg from "../../images/ladyreview.jpg";
+import girlReviewImg from "../../images/placeholderimage.png";
 import Table from "react-bootstrap/Table";
 
 const DeleteEmployerCard = ({
