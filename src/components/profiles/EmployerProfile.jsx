@@ -32,10 +32,12 @@ const EmployerProfile = () => {
               style={{ maxWidth: "10em" }}
             ></Card.Img>
             <Card.Title className="fw-bold pt-2">
+
               {user?.first_name} {user?.last_name}
             </Card.Title>
             <Card.Subtitle className="text-secondary fw-bold fs-6">
               {user?.company_name}
+
             </Card.Subtitle>
           </div>
           <div>
@@ -43,6 +45,7 @@ const EmployerProfile = () => {
               <tbody>
                 <tr>
                   <td>Username:</td>
+
                   <td>{user?.user_name}</td>
                 </tr>
                 <tr>
