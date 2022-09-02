@@ -41,7 +41,7 @@ const EmployerEdit = (props) => {
 
   const newProfile = (e) => {
     e.preventDefault();
-    fetch("http://[::1]:3000/profiles", {
+    fetch("https://hired-app-api.herokuapp.com/profiles", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
