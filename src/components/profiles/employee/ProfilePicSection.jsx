@@ -1,14 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useContext} from "react";
 import girlReviewImg from "../../../images/ladyreview.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPencil } from "@fortawesome/free-solid-svg-icons";
+import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
 import Card from "react-bootstrap/Card";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import ToggleButton from "react-bootstrap/ToggleButton";
 import Table from "react-bootstrap/Table";
+import { UserContext } from "../../../userContext/userContext";
 
-export const ProfilePicSection = () => {
+export const ProfilePicSection = ({see}) => {
   const [radioValue, setRadioValue] = useState("unavailable");
+  const {user} = useContext(UserContext);
+  
 
   const radios = [
     { name: "Available", value: "available" },
@@ -16,8 +19,8 @@ export const ProfilePicSection = () => {
   ];
   return (
     <Card className="shadow-sm">
-      <span className="d-flex justify-content-end pe-4 pt-3">
-        <FontAwesomeIcon icon={faPencil} color="gray" />
+      <span className="d-flex justify-content-end pe-4 pt-3" >
+        <FontAwesomeIcon icon={faCirclePlus} color="gray" onClick={see}/>
       </span>
 
       <Card.Body className="d-md-flex justify-content-between">
@@ -28,7 +31,7 @@ export const ProfilePicSection = () => {
             className="rounded-circle mx-auto"
             style={{ maxWidth: "10em" }}
           ></Card.Img>
-          <Card.Title className="fw-bold pt-2">JobSeeker Name</Card.Title>
+          <Card.Title className="fw-bold pt-2">{user.first_name} {user.last_name}</Card.Title>
         </div>
         <div>
           <div className="">
@@ -36,23 +39,23 @@ export const ProfilePicSection = () => {
               <tbody>
                 <tr>
                   <td>Username:</td>
-                  <td>jane doe</td>
+                  <td>{user.user_name}</td>
                 </tr>
                 <tr>
                   <td>Email:</td>
-                  <td>sample@gmail.com</td>
+                  <td>{user.email}</td>
                 </tr>
                 <tr>
                   <td>Phone:</td>
-                  <td>+254123456</td>
+                  <td>{user.phone_number}</td>
                 </tr>
                 <tr>
                   <td>Role:</td>
-                  <td>UI designer</td>
+                  <td>{user.role}</td>
                 </tr>
                 <tr>
                   <td>Experience:</td>
-                  <td>5 years</td>
+                  <td>3</td>
                 </tr>
                 <tr>
                   <td>

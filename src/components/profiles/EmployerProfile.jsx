@@ -1,3 +1,4 @@
+
 import React, { useContext, useState } from "react";
 import noImg from "../../images/placeholderimage.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,6 +13,7 @@ const EmployerProfile = () => {
   const [profilePicModalShow, setProfilePicModalShow] = useState(false);
   const [employerAboutModalShow, setEmployerAboutModalShow] = useState(false);
   const { user } = useContext(UserContext);
+
 
   return (
     <div className="container mt-3" style={{ maxWidth: "40em" }}>
