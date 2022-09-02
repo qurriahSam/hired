@@ -26,13 +26,13 @@ function EmployerAboutModal(props) {
         const response = await fetch(url, {
           method: "POST",
           headers: {
-            Accept: "application/json",
+            "Content-Type": "application/json",
           },
-          body: { phone_number: Number(userPhone.phone_number) },
+          body: JSON.stringify(userPhone),
         });
         const data = await response.json();
         setIsUploading(false);
-        console.log(data);
+        console.log({data});
 
         /*         if (data.id) {
           setUser(() => data);
