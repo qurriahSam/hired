@@ -2,9 +2,9 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Table from "react-bootstrap/Table";
-import girlReviewImg from "../../images/ladyreview.jpg";
+import girlReviewImg from "../../images/placeholderimage.png";
 
-const JobseekerCard = () => {
+const JobseekerCard = ({ jobseeker }) => {
   return (
     <Card className="mb-3 mx-auto mx-md-3 col" style={{ width: "18rem" }}>
       <Card.Img
@@ -18,24 +18,26 @@ const JobseekerCard = () => {
             <tbody>
               <tr>
                 <td className="fw-bold">Username:</td>
-                <td>first</td>
+                <td>{jobseeker.user_name}</td>
               </tr>
 
               <tr>
                 <td className="fw-bold">Role:</td>
-                <td>Web developer</td>
+                <td>{jobseeker.role}</td>
               </tr>
               <tr>
                 <td className="fw-bold">Experience:</td>
                 <td>
-                  <span>5</span>
+                  <span>{jobseeker.experience} </span>
                   <span>years</span>
                 </td>
               </tr>
             </tbody>
           </Table>
         </div>
-        <Button size="sm">Profile</Button>
+        <Button size="sm" disabled>
+          Profile
+        </Button>
       </Card.Body>
     </Card>
   );

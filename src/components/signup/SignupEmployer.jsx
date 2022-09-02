@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useMutation } from "react-query";
@@ -8,7 +8,7 @@ import { signupEmployer } from "../hooks/useUsers";
 
 function SignupJobseeker() {
   const { setUser } = useContext(UserContext);
-  const [newEmployer, setNewEmployer] = React.useState({
+  const [newEmployer, setNewEmployer] = useState({
     user_name: "",
     first_name: "",
     last_name: "",
@@ -25,7 +25,7 @@ function SignupJobseeker() {
       if (data.id) {
         setUser(data);
         console.log("employer signup success", data);
-        navigate("/employerprofile");
+        navigate("/dashboard");
       } else {
         console.log("employer signup error", data);
       }
