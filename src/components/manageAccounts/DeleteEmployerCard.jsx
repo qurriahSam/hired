@@ -1,10 +1,16 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import girlReviewImg from "../../images/ladyreview.jpg";
+import girlReviewImg from "../../images/placeholderimage.png";
 import Table from "react-bootstrap/Table";
 
-const DeleteEmployerCard = () => {
+const DeleteEmployerCard = ({
+  employer: { id, company_name, email, subscription },
+  deleteUser,
+}) => {
+  const handleDelete = () => {
+    deleteUser(id);
+  };
   return (
     <Card className="mb-3 mx-auto mx-md-3 col" style={{ width: "18rem" }}>
       <Card.Img
@@ -17,19 +23,16 @@ const DeleteEmployerCard = () => {
           <Table borderless size="sm">
             <tbody>
               <tr>
-                <td className="fw-bold">Name:</td>
-                <td>
-                  <span>first</span>
-                  <span> last</span>
-                </td>
-              </tr>
-              <tr>
                 <td className="fw-bold">Email:</td>
-                <td>sample@gmail.com</td>
+                <td>{email}</td>
               </tr>
               <tr>
                 <td className="fw-bold">Company:</td>
-                <td>E-Corp</td>
+                <td>{company_name}</td>
+              </tr>
+              <tr>
+                <td className="fw-bold">Subscribed:</td>
+                <td>{`${subscription}`}</td>
               </tr>
               <tr>
                 <td className="fw-bold">Hires:</td>
@@ -38,7 +41,7 @@ const DeleteEmployerCard = () => {
             </tbody>
           </Table>
         </div>
-        <Button variant="danger" size="sm">
+        <Button variant="danger" size="sm" onClick={handleDelete}>
           Delete User
         </Button>
       </Card.Body>

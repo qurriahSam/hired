@@ -18,16 +18,17 @@ function Login() {
 
   const { mutate } = useMutation(signin, {
     onSuccess: (data) => {
+      localStorage.setItem("user", JSON.stringify(data));
       if (data.id) {
         setUser(() => data);
         if (data.role === "jobseeker") {
           navigate("/jobseekerprofile");
         } else if (data.role === "employer") {
-          navigate("/employeemanagement");
-        } else if (data.role === "Admin") {
+          navigate("/dashboard");
+        } else if (data.role === "admin") {
           navigate("/approveFiles");
         } else {
-          console.log(data.error);
+          console.log(data);
         }
       }
     },

@@ -8,10 +8,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPalette } from "@fortawesome/free-solid-svg-icons";
 import { faCode } from "@fortawesome/free-solid-svg-icons";
 import { faDatabase } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
 const blue = { color: "#1B77AD" };
 
 function Hero() {
+  const navigate = useNavigate();
   return (
     <div className="mb-5">
       <div className="container mb-5">
@@ -32,8 +34,14 @@ function Hero() {
               with your skill set and career objectives.
             </p>
             <div className="mb-2 d-md-flex mb-lg-5">
-              <Button className="px-4 px-md-5 fw-bold me-3">Find Work</Button>
-              <Button variant="outline-dark" className="px-4 px-md-5 fw-bold">
+              <Button className="px-4 px-md-5 fw-bold me-3" onClick={() => navigate("/signup")}>
+                Find Work
+              </Button>
+              <Button
+                variant="outline-dark"
+                className="px-4 px-md-5 fw-bold"
+                onClick={() => navigate("/signup")}
+              >
                 Hire Talent
               </Button>
             </div>

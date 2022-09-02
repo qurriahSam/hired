@@ -2,7 +2,7 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Table from "react-bootstrap/Table";
-import girlReviewImg from "../../images/ladyreview.jpg";
+import girlReviewImg from "../../images/placeholderimage.png";
 
 const EmployeeCard = () => {
   return (
