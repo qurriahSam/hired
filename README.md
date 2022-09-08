@@ -14,16 +14,16 @@ Hired is a job seeking app,where employers can visit, and browse through verifie
 
 ## Setup
 
-1. Create react app (npx create-react-app hired)
+1. Clone this repo
 2. Run 'npm install' to install all dependencies for this project
 3. Run 'npm start' to start a server
-4. 
 
-## Created By
 
-- Sam Kuria (https://github.com/qurriahSam)
-- Desmond Kinoti (https://github.com/desmond107)
-- Precious Mutheu (https://github.com/mutheuprecious)
-- Cathrine Vuthi (https://github.com/esthercate)
-- Samuel Hinga (https://github.com/SKHinga)
+## Contributors
+
+- [Sam Kuria](https://github.com/qurriahSam)
+- [Desmond Kinoti](https://github.com/desmond107)
+- [Precious Mutheu](https://github.com/mutheuprecious)
+- [Cathrine Vuthi](https://github.com/esthercate)
+- [Samuel Hinga](https://github.com/SKHinga)
 
