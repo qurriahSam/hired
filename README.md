@@ -1,6 +1,6 @@
 # Hired
 
-Hired is a job seeking app,where employers can visit, and just browse through verified job-seeker profiles (Documents).
+Hired is a job seeking app,where employers can visit, and browse through verified job-seeker profiles (Documents).
 
 
 [Live Demo]()
