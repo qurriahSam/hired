@@ -47,7 +47,6 @@ function SignupJobseeker() {
     <div className="overflow-auto">
       <Form onSubmit={handleFormSubmit}>
         <Form.Group className="mb-3" controlId="formSignupUsername">
-          <Form.Label>Username:</Form.Label>
           <Form.Control
             type="text"
             placeholder="Username"
@@ -59,7 +58,6 @@ function SignupJobseeker() {
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formSignupFirstName">
-          <Form.Label>First Name:</Form.Label>
           <Form.Control
             type="text"
             placeholder="First Name"
@@ -71,7 +69,6 @@ function SignupJobseeker() {
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formSignupLastName">
-          <Form.Label>Last Name:</Form.Label>
           <Form.Control
             type="text"
             placeholder="Last Name"
@@ -83,7 +80,6 @@ function SignupJobseeker() {
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formSignupCompanyName">
-          <Form.Label>Company:</Form.Label>
           <Form.Control
             type="text"
             placeholder="Company Name"
@@ -95,14 +91,12 @@ function SignupJobseeker() {
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formSignupEmail">
-          <Form.Label>Email address:</Form.Label>
           <Form.Control type="email" placeholder="Email" name="email" onChange={handleChange} />
           <Form.Text className="text-muted d-none">
             We'll never share your email with anyone else.
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formSignupPassword">
-          <Form.Label>Password:</Form.Label>
           <Form.Control
             type="password"
             placeholder="Password"
@@ -114,7 +108,6 @@ function SignupJobseeker() {
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formConfirmSignupPassword">
-          <Form.Label>Confirm Password:</Form.Label>
           <Form.Control
             type="password"
             placeholder="Confirm Password"
