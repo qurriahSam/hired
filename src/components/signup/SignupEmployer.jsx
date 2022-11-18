@@ -41,7 +41,21 @@ function SignupJobseeker() {
     const key = e.target.name;
     const value = e.target.value;
     setNewEmployer({ ...newEmployer, [key]: value });
+    validChecker(key, value)
   };
+
+  const validChecker = (key, value) => {
+    switch (key) {
+      case "user_name":
+        if(value.length < 3) {
+          console.log("name is short")
+        }
+        break;
+    
+      default:
+        break;
+    }
+  }
 
   return (
     <div className="overflow-auto">
@@ -54,7 +68,7 @@ function SignupJobseeker() {
             onChange={handleChange}
           />
           <Form.Text className="text-muted d-none">
-            We'll never share your email with anyone else.
+            Username is too short.
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formSignupFirstName">
