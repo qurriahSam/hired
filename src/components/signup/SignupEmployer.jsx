@@ -18,6 +18,14 @@ function SignupJobseeker() {
     company_name: "",
     admin_id: "1",
   });
+    const [check, setCheck] = useState({
+    user_name: false,
+    first_name: false,
+    last_name: false,
+    email: false,
+    password: false,
+    company_name: false,
+  });
   const navigate = useNavigate();
 
   const { mutate } = useMutation(signupEmployer, {
@@ -44,11 +52,38 @@ function SignupJobseeker() {
     validChecker(key, value)
   };
 
+  const handleCheck = (key) => {
+    setCheck({ ...check, [key]: !check[key] });
+  };
+
   const validChecker = (key, value) => {
     switch (key) {
       case "user_name":
         if(value.length < 3) {
-          console.log("name is short")
+          handleCheck(key)
+          console.log("name is short", check[key])
+        }
+        break;
+      case "first_name":
+        if(value.length < 3) {
+          handleCheck(key)
+          console.log("name is short", check[key])
+        }
+        break;
+      case "last_name":
+        if(value.length < 3) {
+          handleCheck(key)
+          console.log("name is short", check[key])
+        }
+        break;
+      case "email":
+        if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value))) {
+          console.log("wrong email")
+        }
+        break;
+      case "password":
+        if(value.length < 6) {
+          console.log("password is too short")
         }
         break;
     
@@ -78,8 +113,8 @@ function SignupJobseeker() {
             name="first_name"
             onChange={handleChange}
           />
-          <Form.Text className="text-muted d-none">
-            We'll never share your email with anyone else.
+          <Form.Text className="text-muted" style={{ display: check.first_name ? "block" : "none"}}>
+            Name is too short.
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formSignupLastName">
@@ -90,7 +125,7 @@ function SignupJobseeker() {
             onChange={handleChange}
           />
           <Form.Text className="text-muted d-none">
-            We'll never share your email with anyone else.
+            Name is too short.
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formSignupCompanyName">
@@ -101,13 +136,13 @@ function SignupJobseeker() {
             onChange={handleChange}
           />
           <Form.Text className="text-muted d-none">
-            We'll never share your email with anyone else.
+            Invalid Email
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formSignupEmail">
           <Form.Control type="email" placeholder="Email" name="email" onChange={handleChange} />
           <Form.Text className="text-muted d-none">
-            We'll never share your email with anyone else.
+            Enter valid email
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formSignupPassword">
@@ -118,7 +153,7 @@ function SignupJobseeker() {
             onChange={handleChange}
           />
           <Form.Text className="text-muted d-none">
-            We'll never share your email with anyone else.
+           Password is too short.
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formConfirmSignupPassword">
@@ -129,7 +164,7 @@ function SignupJobseeker() {
             onChange={handleChange}
           />
           <Form.Text className="text-muted d-none">
-            We'll never share your email with anyone else.
+            Passwords do not match
           </Form.Text>
         </Form.Group>
         <Button variant="primary" type="submit">
