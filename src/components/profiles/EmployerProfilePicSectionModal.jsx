@@ -29,10 +29,6 @@ function EmployerProfilePicSectionModal(props) {
   };
 
   const handleSubmit = () => {
-    /*     const userData = new FormData();
-    for (const key in userDetails) {
-      userData.append(key.toString(), userDetails[key]);
-    } */
     console.log(userDetails);
     const sendData = async () => {
       try {
@@ -48,11 +44,6 @@ function EmployerProfilePicSectionModal(props) {
         const data = await response.json();
         setIsUploading(false);
         console.log(data);
-        /* 
-        if (data.id) {
-          
-          setUser(data);
-        } */
       } catch (error) {
         setIsUploading(false);
         console.log("signup error", error);
