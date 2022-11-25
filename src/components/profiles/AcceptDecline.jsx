@@ -14,12 +14,7 @@ function AcceptDecline() {
             Once the essential functions are defined, the employer can make a determination as to
             whether the functions are essential or marginal. The use of the term "essential
             function" should be part of the job description, and it should explicitly state how an
-            individual is to perform the job. This will provide future guidance as to whether the
-            job can be performed with or without an accommodation.Once the performance standard for
-            a particular job has been made, essential functions of the position must be defined.
-            This will provide a better avenue for evaluating Americans with Disabilities Act (ADA)
-            accommodation requests. Defining the essential functions encompasses the following
-            steps:
+            individual is to perform the job.
           </Card.Text>
           <div className="mb-2 d-flex justify-content-end">
             <Button variant="success" size="sm">
