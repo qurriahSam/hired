@@ -1,6 +1,6 @@
 # Hired
 
-Hired is a job seeking app,where employers can visit, and browse through verified job-seeker profiles (Documents).
+Hired is a job seeking application that enables employers to peruse a database of verified job-seeker profiles with ease. The platform features advanced technologies, including React, Ruby on Rails, AWS S3, and Mobile Money Daraja API, which have been expertly integrated to create a seamless and intuitive user experience. In addition, job-seekers can also leverage the platform to showcase their talents and upload supporting documents for verification, thereby enhancing their chances of landing a dream job. With its innovative design and state-of-the-art technologies, Hired represents the pinnacle of web and mobile application development, and is sure to become a valuable asset for both employers and job-seekers alike.
 
 
 [Live Demo](https://hired-eight.vercel.app/)
@@ -10,6 +10,7 @@ Hired is a job seeking app,where employers can visit, and browse through verifie
 ## Technologies Used
 * Ruby on Rails API on the back end ([see the backend repo here](https://github.com/esthercate/hired-api))
 * React & Bootsrap on the front-end
+* Daraja Api - Mobile Money Mpesa integration
 * PostgreSQL
 
 ## Setup
